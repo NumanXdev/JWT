@@ -10,6 +10,7 @@ const Home = () => {
   const [username, setUsername] = useState("");
   useEffect(() => {
     const verifyCookie = async () => {
+      console.log(cookies);
       if (!cookies.token) {
         navigate("/login");
       }
