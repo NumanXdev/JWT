@@ -21,7 +21,7 @@ const Home = () => {
 
       try {
         const { data } = await axios.post(
-          "https://jwt-bh5w.onrender.com",
+          "https://jwt-backend-omega.vercel.app",
           {},
           { withCredentials: true }
         );

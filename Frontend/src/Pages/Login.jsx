@@ -31,7 +31,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://jwt-bh5w.onrender.com/login",
+        "https://jwt-backend-omega.vercel.app/login",
         {
           ...inputValue,
         },
