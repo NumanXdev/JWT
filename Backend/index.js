@@ -26,7 +26,7 @@ app.use(
 
 app.use(cookieParser());
 app.use(express.json());
-
+app.set("trust proxy", 1);
 app.use("/", authRoute);
 
 app.get("/", (req, res) => {
