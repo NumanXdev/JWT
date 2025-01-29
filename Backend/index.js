@@ -29,7 +29,7 @@ app.use(express.json());
 app.set("trust proxy", true);
 app.use("/", authRoute);
 
-app.get("/", (req, res) => {
+app.get("/good", (req, res) => {
   res.send("good");
 });
 
