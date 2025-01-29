@@ -26,7 +26,7 @@ const Home = () => {
           { withCredentials: true }
         );
 
-        console.log("Response from server:", data); // Debugging server response
+        console.log("Response from server:", data); 
         const { status, user } = data;
 
         setUsername(user);

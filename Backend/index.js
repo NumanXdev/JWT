@@ -16,13 +16,14 @@ mongoose
   .then(() => console.log("MongoDB is connected successfully"))
   .catch((err) => console.error(err));
 
-app.use(
-  cors({
-    origin: "https://jwt-drab.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
-);
+  app.use(
+    cors({
+      origin: "https://jwt-drab.vercel.app", // Your frontend URL
+      credentials: true, // Allow cookies and credentials
+      methods: ["GET", "POST", "PUT", "DELETE"],
+      allowedHeaders: ["Content-Type", "Authorization"], // Allow necessary headers
+    })
+  );
 
 app.use(cookieParser());
 app.use(express.json());
